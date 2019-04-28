@@ -1,1 +1,10 @@
-# Mongo-Scraper
+## Technologies
+- [Node.js](https://nodejs.org/en/)
+- [Express](https://expressjs.com/)
+- [MongoDB](https://www.mongodb.com/)
+- [Mongoose ODM](https://mongoosejs.com/)
+- [Handlebars](https://handlebarsjs.com/)
+- [Materialize](http://materializecss.com/)
+- [Cheerio](https://github.com/cheeriojs/cheerio)
+- [Axios](https://www.npmjs.com/package/axios)
+- [jQuery](https://jquery.com/)

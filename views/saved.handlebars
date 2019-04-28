@@ -1,0 +1,82 @@
+<nav>
+    <div class="nav-wrapper white darken-2">
+        <div class="container">
+            <a href="/" class="brand-logo"><img class="npr-logo" src="/img/npr-logo.svg" /></a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fas fa-bars"></i></a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><b><a class="view-saved nav-link" href="/saved">Saved articles</a></b></li>
+                <li><b><a class="scrape nav-link">Scrape NPR Music</a></b></li>
+            </ul>
+            <ul class="sidenav" id="mobile-demo">
+                <li><a class="view-saved" href="/saved">Saved articles</a></li>
+                <li><a class="scrape">Scrape NPR Music</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">Article Comments</h4>
+            </div>
+
+            <div class="modal-body">
+                <div>
+                    <div class="comment-section">
+
+                    </div>
+
+                </div>
+                <form>
+                    <input type="text" class="form-control comment-body" placeholder="Enter a comment..." />
+
+                    <div id="buttons-section">
+                        <button type='submit' class='add-comment btn-small blue darken-2'>Add comment</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close btn-flat">Cancel</a>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-content">
+            <h1 class="grey-text text-darken-2 center">Saved articles</h1>
+        </div>
+    </div>
+    <div class="row saved-articles">
+        {{#each articles}}
+        <div class="col s12">
+            <div class="card">
+                <div class="card-content">
+                    <div class="row content-box">
+                        <div class="col m5 s12 image-box">
+                            <img src={{image}} class='responsive-img'>
+                        </div>
+                        <div class="col m7 s12">
+                            <span class="card-title">
+                                <a href={{link}}>
+                                    <h4>{{title}}</h4>
+                                </a>
+                            </span>
+                            <p>{{teaser}}</p>
+                        </div>
+                    </div>
+                    <div class="card-action">
+                        <button class="btn btn-small blue darken-2 article-comments modal-trigger" data-target="modal1"
+                            data-id={{_id}}>View
+                            comments</button>
+                        <button class="btn btn-small red darken-2 delete-save" data-id={{_id}}>Remove from
+                            saved</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+
+
+</div>
